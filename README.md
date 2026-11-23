@@ -1,60 +1,98 @@
 # Portfolio - Jakub Król
 
-Statyczne portfolio Web Developera skierowane do klientów zamawiających strony dla firm. HTML, CSS i JavaScript; bez frameworka, PHP, bazy danych, instalacji pakietów, zewnętrznych fontów, analityki i formularza udającego wysyłkę.
+Cześć! Jestem Jakub i zajmuję się tworzeniem stron internetowych.
 
-## Otwórz teraz
+To moje portfolio, w którym przedstawiam swoje umiejętności, projekty oraz usługi, jakie oferuję. Stworzyłem je przede wszystkim z myślą o osobach i firmach, które szukają kogoś do wykonania strony internetowej lub wprowadzenia poprawek w już istniejącej witrynie.
 
-Kliknij dwukrotnie `index.html` w folderze `portfolio/moja-strona`. XAMPP nie jest potrzebny. Możesz też otworzyć `dist/index.html` - to przygotowana kopia publikacyjna. Kopiowanie e-maila wymaga obsługi schowka i odpowiedniego kontekstu przeglądarki; w razie odmowy podawana jest instrukcja ręcznego skopiowania. Kontakt przez przycisk e-mail otwiera program pocztowy użytkownika.
+Portfolio jest w pełni responsywne, więc można je wygodnie przeglądać zarówno na komputerze, jak i telefonie.
 
-Opcjonalny serwer lokalny, jeśli chcesz podgląd HTTP (z katalogu `moja-strona`):
+## Technologie
+
+Do stworzenia strony wykorzystałem:
+
+- HTML5
+- CSS3
+- JavaScript
+
+Postawiłem na zwykły HTML, CSS i JavaScript, ponieważ w przypadku takiej strony nie widziałem potrzeby korzystania z dodatkowych frameworków.
+
+Portfolio nie wymaga bazy danych ani backendu.
+
+## Co znajduje się na stronie?
+
+- **O mnie** - kilka informacji o mnie, moim wykształceniu i umiejętnościach.
+- **Usługi** - oferta tworzenia stron internetowych, landing page'ów oraz poprawiania istniejących witryn.
+- **Realizacje** - projekty, nad którymi pracowałem.
+- **Technologie** - narzędzia i języki, z których korzystam.
+- **Kontakt** - możliwość skontaktowania się ze mną w sprawie współpracy.
+
+Zadbałem również o responsywność, podstawową optymalizację SEO, dostępność oraz drobne animacje poprawiające wygląd strony.
+
+## Moje projekty
+
+### Zalewamy.pl
+
+Jednym z projektów, które prezentuję w portfolio, jest strona fikcyjnej firmy zajmującej się sprzedażą betonu.
+
+Projekt powstał we współpracy z Wiktorem Wójcikiem i Kacprem Krzemińskim.
+
+Wykorzystaliśmy w nim HTML, CSS, JavaScript, PHP i MySQL.
+
+Strona zawiera między innymi:
+
+- Katalog produktów z cenami.
+- Koszyk z możliwością dodawania produktów.
+- Obliczanie wartości zamówienia.
+- Formularz składania zamówień.
+- Zapisywanie zamówień w bazie danych MySQL.
+- Walidację danych po stronie serwera.
+
+Jest to projekt demonstracyjny, a nie realizacja dla prawdziwej firmy.
+
+W portfolio umieściłem również zrzuty ekranu, dzięki którym można zobaczyć wygląd strony bez konieczności uruchamiania aplikacji PHP/MySQL.
+
+## Jak uruchomić portfolio?
+
+Portfolio jest stroną statyczną, dlatego nie wymaga instalowania dodatkowych bibliotek ani uruchamiania XAMPP.
+
+Wystarczy pobrać repozytorium i otworzyć plik `index.html` w przeglądarce.
+
+Można również uruchomić lokalny serwer HTTP, np. korzystając z PHP dołączonego do XAMPP:
 
 ```powershell
 C:\xampp\php\php.exe -S 127.0.0.1:8090 -t dist
 ```
 
-Następnie otwórz `http://127.0.0.1:8090`. To tylko sposób serwowania statycznych plików; portfolio nie zawiera PHP. Działający projekt Zalewamy.pl pozostaje osobno, bez zmian w `strona1`.
+Następnie otworzyć w przeglądarce:
 
-## Kontakt i konfiguracja
+`http://127.0.0.1:8090`
 
-`config.js` zawiera publiczne dane kontaktowe, GitHuba i opcjonalne ścieżki:
+## Konfiguracja
 
-| Pole | Znaczenie |
-| --- | --- |
-| `email` | `jakubkrol721@gmail.com` |
-| `github` | `https://github.com/Jaqubeq`; puste pole ukrywa link po przebudowaniu |
-| `siteUrl` | Docelowy publiczny URL HTTPS, gdy wybierzesz domenę |
-| `profilePhoto` | Np. `assets/jakub.jpg`; zostaw puste, aby wyświetlać monogram |
-| `projectScreenshot` | Opcjonalny prawdziwy zrzut strony, np. `assets/zalewamy-screen.webp` |
-| `projectDemoUrl` | Publiczny URL HTTPS projektu Zalewamy.pl; nie ustawiaj localhost |
+Podstawowe ustawienia strony znajdują się w pliku `config.js`.
 
-Po zmianach uruchom `node scripts/build.mjs` i opublikuj ponownie zawartość `dist`. Skrypt synchronizuje e-mail w HTML wynikowym, dzięki czemu kontakt działa bez JavaScript. Jeżeli edytujesz pliki ręcznie bez przebudowywania, aktualizuj e-mail i GitHuba również w `index.html`.
+Można tam zmienić między innymi:
 
-## Co jest na stronie
+- `email` - adres kontaktowy.
+- `github` - link do profilu GitHub.
+- `siteUrl` - publiczny adres portfolio.
+- `profilePhoto` - ścieżkę do zdjęcia profilowego.
+- `projectScreenshot` - opcjonalny zrzut ekranu projektu.
+- `projectDemoUrl` - adres działającej wersji projektu.
 
-- Hero z podanym nagłówkiem, ceną od 499 zł i dwoma przyciskami.
-- Trzy usługi z zakresem, ceną i kontaktem. Domena oraz hosting są wyraźnie opisane jako osobny koszt.
-- Rzeczywisty opis demonstracyjnego projektu Zalewamy.pl i okno z opisem jego logiki.
-- Autentyczny opis edukacji, INF.03 / INF.04 i poziomu technologii; brak deklaracji komercyjnego stażu.
-- Monogram zamiast wymyślonego portretu. Możliwość dodania własnego zdjęcia.
-- Technologie bez procentowych wskaźników, przebieg współpracy i bezpośredni kontakt.
-- Mobilne menu, widoczne stany klawiatury, link pomijający nawigację, natywny dialog z obsługą Escape i ograniczenie ruchu przy `prefers-reduced-motion`.
-- Metadane SEO / Open Graph i favicon. Po ustawieniu `siteUrl` build dodaje canonical, og:url, sitemap i odwołanie w robots.txt.
+Po zmianie konfiguracji można przebudować stronę poleceniem:
 
-## Projekt Zalewamy.pl i materiały wizualne
+```powershell
+node scripts/build.mjs
+```
 
-Opis powstał po odczytaniu rzeczywistego kodu katalogu, koszyka, kontrolera zamówień, walidacji i schematu bazy w `../strona1`. Nie przedstawia projektu jako zlecenia dla klienta. Zachowano informację o współautorach oryginału: Wiktor Wójcik, Jakub Król, Kacper Krzemiński.
+Gotowe pliki do publikacji znajdują się w folderze `dist`.
 
-W karcie i galerii znajdują się trzy rzeczywiste screenshoty przekazane przez Jakuba: strona główna, katalog mieszanek oraz pusty koszyk. Pliki są kopiowane bez modyfikowania ich treści do `assets/zalewamy-home.png`, `assets/zalewamy-catalog.png` i `assets/zalewamy-cart.png`. Kliknięcie powiększa obraz w natywnym oknie dialogowym; Escape i przycisk Zamknij zamykają podgląd. Bez JavaScript link prowadzi do oryginalnego obrazu.
+Jeżeli zmieniasz dane kontaktowe bez przebudowywania projektu, pamiętaj o ich aktualizacji również w `index.html`.
 
-Osobisty znak w miejscu monogramu oraz favicon mają napis `kuti`. Imię i nazwisko Jakub Król nadal występuje w nagłówku, kontakcie i opisie. W tekstach portfolio nie używa się długiego myślnika wskazanego przez użytkownika. Nie zmieniano `strona1` ani treści screenshotów.
+## Testowanie
 
-## Dodanie kolejnego projektu
-
-W `index.html` sekcja `#realizacje` zawiera niezależny `article.project`. Skopiuj go, zmień tytuł, opis, technologie, obraz i atrybut `aria-labelledby` wraz z ID nagłówka. Usuń przycisk `data-open-case` z nowej karty, jeżeli nie tworzysz dla niej dodatkowego opisu. To zwykły HTML, bez ukrytej zależności od CMS. Dla większej liczby projektów można później wydzielić dane; obecny zakres tego nie wymaga.
-
-## Kontrola i przygotowanie publikacji
-
-Wymagany tylko Node.js, bez `npm install`:
+W projekcie znajdują się również proste skrypty pozwalające sprawdzić poprawność kodu i przygotować wersję do publikacji.
 
 ```powershell
 node --check app.js
@@ -63,9 +101,26 @@ node scripts/test.cjs
 node scripts/build.mjs
 ```
 
-Skrypt budowania kopiuje stronę do własnego folderu `dist/`. Usuwa wyłącznie poprzedni `dist` w tym projekcie; nie dotyka `strona1`. Nie umieszczaj tam ręcznie materiałów źródłowych. Wysyłaj na hosting **zawartość `dist`**, z `index.html` w katalogu głównym, zachowując `assets/`. Możesz użyć dowolnego hostingu statycznego lub zwykłego hostingu WWW. Nie potrzebujesz obsługi PHP ani MySQL.
+Dodatkowe informacje dotyczące przeprowadzonych testów znajdują się w pliku `TEST_REPORT.md`.
 
-Po uzyskaniu domeny ustaw `siteUrl` na pełny adres HTTPS (dla podkatalogu z ukośnikiem na końcu), przebuduj i wgraj pliki. Sprawdź kontakt, menu, okno projektu i wygląd na telefonie. Nie dodano fikcyjnej domeny, linku do lokalnego demo ani nie opublikowano strony bez wybranej lokalizacji.
+## Publikacja
 
-Wyniki i ograniczenia weryfikacji znajdują się w `TEST_REPORT.md`.
-Kadry screenshotow maja proporcje 16:9, aby bialy pas na dole dostarczonych plikow nie byl widoczny w galerii ani powiekszeniu. Jest to kadrowanie wyswietlania przez CSS, bez zmieniania tresci oryginalnych obrazow.
+Portfolio przygotowałem z myślą o hostowaniu na Cloudflare Pages.
+
+Strona nie wymaga PHP ani MySQL, dlatego może działać na darmowym hostingu statycznym.
+
+Do publikacji wykorzystywany jest folder `dist`, który zawiera gotową wersję strony.
+
+Po podłączeniu repozytorium do Cloudflare Pages można automatycznie publikować kolejne zmiany przesyłane na GitHuba.
+
+## Kontakt
+
+Jeżeli chcesz się ze mną skontaktować w sprawie strony internetowej, poprawek lub współpracy, możesz napisać na:
+
+**E-mail:** jakubkrol721@gmail.com
+
+**GitHub:** [Jaqubeq](https://github.com/Jaqubeq)
+
+---
+
+Jakub Król
