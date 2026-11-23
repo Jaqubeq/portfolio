@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101318">
+  <meta name="description" content="Jakub Król - tworzę nowoczesne strony internetowe dla firm. Responsywne wizytówki od 499 zł, landing page i rozbudowa stron. Ostrowiec Świętokrzyski, zdalnie w całej Polsce.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Jakub Król - strony internetowe dla firm">
+  <meta property="og:description" content="Dopracowana strona dla Twojej firmy. Strony wizytówki od 499 zł. Współpraca zdalna w całej Polsce.">
+  <title>Jakub Król - strony internetowe dla firm od 499 zł</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#start" aria-label="Jakub Król - początek strony">Jakub Król<span class="wordmark-dot" aria-hidden="true">.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" type="button">Menu <span aria-hidden="true">☰</span></button>
+      <nav id="navigation" aria-label="Nawigacja główna">
+        <a href="#realizacje">Realizacje</a><a href="#uslugi">Usługi</a><a href="#o-mnie">O mnie</a><a href="#kontakt" class="nav-contact">Porozmawiajmy</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" id="start" aria-labelledby="hero-title">
+      <div class="hero-topline"><span>WEB DEVELOPER · JAKUB KRÓL</span><span>OSTROWIEC ŚWIĘTOKRZYSKI / ZDALNIE</span></div>
+      <div class="hero-layout">
+        <div class="hero-copy"><h1 id="hero-title">Tworzę nowoczesne<br class="desktop-break"> strony internetowe<br class="desktop-break"> <em>dla Twojej firmy.</em></h1>
+          <p class="hero-description">Nazywam się Jakub Król. Projektuję i tworzę szybkie, responsywne strony internetowe, które pomagają firmom profesjonalnie prezentować swoją ofertę w internecie.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#realizacje">Zobacz realizacje</a><a class="button button-outline" href="#kontakt">Zapytaj o wycenę</a></div>
+          <p class="hero-note">Bezpośredni kontakt. Jasny zakres. Strona dopasowana do firmy.</p>
+        </div>
+        <aside class="hero-aside" aria-label="Oferta podstawowa">
+          <div class="offer-label"><span class="small-mark" aria-hidden="true">kuti</span><span>TWÓJ BIZNES<br>W DOBRYM MIEJSCU.</span></div>
+          <div class="offer-price"><p>Strony internetowe</p><strong>od 499<span> zł</span></strong><span class="offer-caption">Dobry początek w internecie.</span></div>
+          <div class="offer-lines"><p>Wygląd dopasowany do firmy</p><p>Wersja na telefon i komputer</p><p>Publikacja na Twoim hostingu</p></div>
+          <p class="offer-footnote">Prosta strona wizytówka do 5 sekcji.<br>Domena i hosting płatne osobno.</p>
+        </aside>
+      </div>
+      <div class="hero-bottom"><span>Strona, która jasno pokazuje, co robisz.</span><a href="#realizacje">Poznaj moje podejście <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="section projects-section" id="realizacje" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">WYBRANY PROJEKT</p><h2 id="projects-title">Od pomysłu<br>do działającej strony.</h2></div><p>Wygląd ma znaczenie.<br>Funkcjonalność również.</p></div>
+        <!-- Kolejne projekty: skopiuj article.project i nadaj unikalny identyfikator. -->
+        <article class="project" aria-labelledby="zalewamy-title">
+          <div class="project-visual"><div class="visual-top"><span>ZALEWAMY.PL</span><span>PROJEKT DEMONSTRACYJNY</span></div><img src="assets/zalewamy-home.png" width="1920" height="1263" alt="Zrzut strony głównej Zalewamy.pl z ofertą betoniarni" loading="lazy"><span class="visual-caption">Rzeczywisty podgląd strony Zalewamy.pl</span></div>
+          <div class="project-content"><span class="project-type">STRONA FIRMOWA Z SYSTEMEM ZAMÓWIEŃ</span><h3 id="zalewamy-title">Zalewamy.pl</h3><p>Serwis fikcyjnej firmy budowlanej oferującej beton. Łączy prezentację oferty z katalogiem produktów i pełnym procesem zamówienia - od wyboru mieszanki do zapisu w bazie.</p><ul class="project-features"><li>Katalog produktów z podglądem cen</li><li>Koszyk z edycją ilości i podsumowaniem</li><li>Formularz z walidacją po stronie serwera</li><li>Zamówienia i ich pozycje zapisywane w MySQL</li></ul><ul class="tags" aria-label="Technologie projektu"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li></ul><div class="project-actions"><button class="text-button" type="button" data-open-case hidden>Jak działa ten projekt</button><a class="text-link" data-project-demo hidden target="_blank" rel="noopener noreferrer">Zobacz działające demo</a></div><p class="project-disclaimer">Projekt demonstracyjny, nie realizacja dla klienta. Autorzy oryginału: Wiktor Wójcik, Jakub Król i Kacper Krzemiński.</p></div>
+          <div class="project-gallery" aria-labelledby="gallery-title">
+            <div class="gallery-heading"><h4 id="gallery-title">Zobacz projekt z bliska</h4><p>Kliknij zrzut, aby go powiększyć.</p></div>
+            <div class="gallery-grid">
+              <figure><a href="assets/zalewamy-home.png" data-gallery aria-label="Powiększ zrzut strony głównej"><img src="assets/zalewamy-home.png" width="1920" height="1263" loading="lazy" alt="Strona główna Zalewamy.pl: prezentacja firmy i oferty"></a><figcaption>Strona główna</figcaption></figure>
+              <figure><a href="assets/zalewamy-catalog.png" data-gallery aria-label="Powiększ zrzut katalogu mieszanek"><img src="assets/zalewamy-catalog.png" width="1920" height="1263" loading="lazy" alt="Katalog betonu z cenami i polami wyboru ilości"></a><figcaption>Katalog mieszanek</figcaption></figure>
+              <figure><a href="assets/zalewamy-cart.png" data-gallery aria-label="Powiększ zrzut pustego koszyka"><img src="assets/zalewamy-cart.png" width="1920" height="1263" loading="lazy" alt="Widok pustego koszyka z przyciskiem powrotu do wyboru betonu"></a><figcaption>Pusty koszyk</figcaption></figure>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+    <section class="section container" id="uslugi" aria-labelledby="services-title">
+      <div class="section-heading"><div><p class="eyebrow">W CZYM MOGĘ POMÓC</p><h2 id="services-title">Twoja firma.<br>Twoje potrzeby.</h2></div><p>Dla lokalnych biznesów i firm z całej Polski.<br>Od pierwszej wizytówki po rozwój obecnej strony.</p></div>
+      <div class="services-grid">
+        <article class="service-card featured"><span class="service-kicker">DOBRY START</span><h3>Strona internetowa</h3><p class="service-price">od 499 zł</p><p>Przejrzysta wizytówka, która przedstawia Twoją firmę i ułatwia klientom kontakt.</p><ul><li>Responsywna strona do 5 sekcji</li><li>Prezentacja usług firmy</li><li>Galeria zdjęć lub realizacji</li><li>Dane kontaktowe</li><li>Podstawowa optymalizacja SEO</li><li>Publikacja na hostingu klienta</li></ul><p class="service-note">Prosta strona bez rozbudowanego backendu. Domena i hosting są opłacane osobno przez klienta.</p><a href="#kontakt" class="button button-primary" data-service="Strona internetowa">Zapytaj o stronę</a></article>
+        <article class="service-card"><span class="service-kicker">JEDEN KONKRETNY CEL</span><h3>Landing page</h3><p class="service-price individual">Wycena indywidualna</p><p>Strona skupiona na produkcie, usłudze lub ofercie, którą chcesz wypromować.</p><ul><li>Prezentacja produktu lub usługi</li><li>Profesjonalny projekt</li><li>Responsywność</li><li>Sekcje zachęcające do kontaktu lub zakupu</li></ul><p class="service-note">Zakres i cenę ustalamy przed rozpoczęciem pracy, na podstawie Twoich potrzeb.</p><a href="#kontakt" class="button button-outline" data-service="Landing page">Porozmawiajmy o ofercie</a></article>
+        <article class="service-card"><span class="service-kicker">KOLEJNY KROK</span><h3>Poprawki i rozbudowa</h3><p class="service-price individual">Wycena indywidualna</p><p>Masz już stronę? Pomogę poprawić jej działanie, wygląd i wygodę korzystania.</p><ul><li>Poprawki HTML, CSS i JavaScript</li><li>Naprawa błędów PHP</li><li>Poprawa responsywności</li><li>Aktualizacja treści</li><li>Rozbudowa funkcjonalności</li></ul><p class="service-note">Najpierw sprawdzę istniejący projekt i ustalę z Tobą, co wymaga zmiany.</p><a href="#kontakt" class="button button-outline" data-service="Poprawki i rozbudowa">Opowiedz o swojej stronie</a></article>
+      </div>
+      <div class="industries"><span>DLA RÓŻNYCH BRANŻ</span><p>Detailing i motoryzacja <i>·</i> Budownictwo <i>·</i> Fryzjerstwo i uroda <i>·</i> Lokalne usługi <i>·</i> Twoja firma</p></div>
+    </section>
+    <section class="section about-section" id="o-mnie" aria-labelledby="about-title"><div class="container about-layout"><div class="about-identity"><p class="eyebrow">OSOBA ZA PROJEKTEM</p><div class="portrait" data-portrait><span class="nickname" aria-hidden="true">kuti</span><span class="portrait-caption">JAKUB KRÓL / WEB DEVELOPER</span></div></div><div class="about-copy"><h2 id="about-title">Cześć, jestem Jakub.<br><span>Porozmawiajmy o Twojej stronie.</span></h2><p>Jestem uczniem piątej klasy technikum na kierunku technik programista. Posiadam kwalifikacje INF.03 i INF.04, a swoje umiejętności rozwijam przy konkretnych projektach.</p><p>Tworzę strony w HTML, CSS i JavaScript, a rozwiązania wymagające bazy danych - w PHP i MySQL. Uczę się również React i Next.js. Zależy mi na stronach, które dobrze wyglądają, szybko działają i odpowiadają na rzeczywiste potrzeby firmy.</p><p>Pracuję z Ostrowca Świętokrzyskiego. Zlecenia realizuję zdalnie w całej Polsce - kontaktujesz się bezpośrednio ze mną, od ustalenia zakresu po publikację strony.</p><div class="qualifications"><span>INF.03</span><span>INF.04</span><p>Kwalifikacje zawodowe<br>na kierunku technik programista</p></div></div></div></section>
+    <section class="section container technologies" aria-labelledby="technology-title"><div><p class="eyebrow">WARSZTAT PRACY</p><h2 id="technology-title">Technologie za stroną.</h2><p>Narzędzia dobieram do potrzeb projektu.</p></div><div class="technology-list"><div><h3>Na co dzień</h3><ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>PHP</li><li>MySQL</li></ul></div><div><h3>Rozwijam umiejętności</h3><ul class="tags"><li>React</li><li>Next.js</li></ul><p>React - podstawy i rozwój w kierunku poziomu średniego.<br>Next.js - podstawowa znajomość.</p></div></div></section>
+    <section class="section container process" aria-labelledby="process-title"><div class="section-heading"><div><p class="eyebrow">PROSTY PRZEBIEG WSPÓŁPRACY</p><h2 id="process-title">Wiesz, co dzieje się dalej.</h2></div></div><div class="process-grid"><article><h3>Rozmawiamy</h3><p>Opowiadasz o firmie i o tym, do czego potrzebujesz strony. Ustalamy zakres, wycenę i termin.</p></article><article><h3>Tworzę i dopracowuję</h3><p>Przygotowuję stronę, pokazuję efekty i wspólnie omawiamy poprawki w ustalonym zakresie.</p></article><article><h3>Publikujemy</h3><p>Sprawdzam działanie na różnych ekranach i publikuję zaakceptowaną stronę na Twoim hostingu.</p></article></div></section>
+    <section class="contact-section" id="kontakt" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">ZACZNIJMY OD ROZMOWY</p><h2 id="contact-title">Twoja firma ma ofertę.<br><em>Pokażmy ją światu.</em></h2><p>Opisz krótko, czym się zajmujesz i jakiej strony potrzebujesz. Ustalimy, od czego najlepiej zacząć.</p><p class="contact-location">Ostrowiec Świętokrzyski<br>Zdalnie w całej Polsce</p></div><div class="contact-panel"><span class="service-kicker">KONTAKT BEZPOŚREDNIO ZE MNĄ</span><p class="contact-name">Jakub Król</p><p data-contact-status>jakubkrol721@gmail.com</p><a class="button button-primary" data-email-link href="mailto:jakubkrol721@gmail.com?subject=Zapytanie%20o%20wycen%C4%99">Napisz do mnie</a><button type="button" class="text-button copy-email" data-copy-email hidden>Kopiuj adres e-mail</button><a class="text-link github-link" data-github href="https://github.com/Jaqubeq" target="_blank" rel="noopener noreferrer">Zobacz mój GitHub</a><p class="contact-hint">W wiadomości możesz podać branżę, planowany zakres i termin. Kilka zdań wystarczy.</p><p class="copy-status" data-copy-status aria-live="polite"></p><noscript><p>Kontakt e-mail działa również bez JavaScript.</p></noscript></div></div></section>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="#start">Jakub Król<span class="wordmark-dot" aria-hidden="true">.</span></a><p>Strony internetowe z myślą o Twojej firmie.</p><span>© <span data-year>2026</span> Jakub Król</span></footer>
+  <dialog class="case-dialog" aria-labelledby="case-title"><div class="dialog-bar"><span>PROJEKT DEMONSTRACYJNY</span><button class="dialog-close" type="button" aria-label="Zamknij opis projektu">Zamknij <span aria-hidden="true">×</span></button></div><div class="dialog-body"><p class="eyebrow">ZALEWAMY.PL</p><h2 id="case-title">Oferta, która prowadzi<br>do zamówienia.</h2><p>Użytkownik wybiera mieszanki w katalogu, określa ilości i sprawdza cenę. Koszyk przechowuje wybór w sesji. Po uzupełnieniu danych PHP waliduje formularz i zapisuje zamówienie oraz jego pozycje w MySQL.</p><h3>Co jest pod maską?</h3><ul><li>Wspólna logika walidacji i liczenia kwot w groszach.</li><li>Przygotowane zapytania PDO i ochrona formularzy CSRF.</li><li>Transakcja łącząca zapis zamówienia i jego pozycji.</li><li>Ceny pobierane z bazy, a nie przyjmowane z przeglądarki.</li><li>Responsywny katalog, formularze i tabela koszyka.</li></ul><p class="muted">Opis oparty na rzeczywistym kodzie projektu. Projekt nie realizuje prawdziwych płatności i dostaw. Oryginalna praca zespołowa; autorzy: Wiktor Wójcik, Jakub Król i Kacper Krzemiński.</p><a class="button button-primary" href="#kontakt" data-case-contact>Chcę porozmawiać o podobnej stronie</a></div></dialog>
+
+  <dialog class="screenshot-dialog" aria-labelledby="screenshot-title"><div class="dialog-bar"><h2 id="screenshot-title">Podgląd Zalewamy.pl</h2><button class="dialog-close" type="button" data-close-screenshot aria-label="Zamknij zrzut ekranu">Zamknij <span aria-hidden="true">×</span></button></div><div class="screenshot-frame"><img data-full-screenshot alt=""></div></dialog>
+</body></html>

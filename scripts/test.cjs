@@ -1,0 +1,43 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const root = path.resolve(__dirname, '..');
+const { emailAddress, safeHttps, localImage } = require('../app.js');
+let checks = 0;
+function check(value, message) { assert.ok(value, message); checks++; }
+check(emailAddress('jakubkrol721@gmail.com') === 'jakubkrol721@gmail.com', 'valid email');
+for (const input of ['', 'a@', 'a@example.com\r\nBcc:x@example.com', '<x>@example.com', 'a?bcc=x@example.com', null]) check(!emailAddress(input), 'invalid email rejected');
+check(safeHttps('https://github.com/Jaqubeq', 'github.com') === 'https://github.com/Jaqubeq', 'GitHub URL');
+for (const input of ['javascript:alert(1)', 'http://example.com', 'https://github.com.evil.test/x', 'https://a:b@github.com/Jaqubeq']) check(!safeHttps(input, 'github.com'), 'unsafe profile URL rejected');
+check(localImage('assets/jakub.jpg') === 'assets/jakub.jpg', 'profile image');
+for (const input of ['assets/../private.jpg', 'https://example.com/a.jpg', 'assets/a.svg', null]) check(!localImage(input), 'unsafe image path rejected');
+const context = { window: {} };
+vm.runInNewContext(fs.readFileSync(path.join(root, 'config.js'), 'utf8'), context);
+check(Boolean(emailAddress(context.window.PORTFOLIO_CONFIG.email)), 'configured email');
+check(!context.window.PORTFOLIO_CONFIG.github || Boolean(safeHttps(context.window.PORTFOLIO_CONFIG.github, 'github.com')), 'configured profile');
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+check(ids.length === new Set(ids).size, 'unique HTML IDs');
+for (const m of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+  const ref = m[1];
+  if (ref.startsWith('#')) check(ids.includes(ref.slice(1)), 'anchor ' + ref);
+  else if (!/^(?:https?:|mailto:)/.test(ref)) check(fs.existsSync(path.join(root, ref)), 'resource ' + ref);
+}
+check((html.match(/<h1\b/g) || []).length === 1, 'one H1');
+check(!/<form\b/i.test(html), 'no nonfunctional form');
+check(html.includes('mailto:jakubkrol721@gmail.com'), 'contact works without JavaScript');
+check(html.includes('lang="pl"') && html.includes('name="viewport"'), 'document metadata');
+check(!/https?:\/\/(?:localhost|127\.0\.0\.1)/.test(html), 'no public localhost links');
+check(html.includes('Projekt demonstracyjny') && html.includes('Wiktor Wójcik'), 'honest project attribution');
+const css = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
+check(css.split('{').length === css.split('}').length, 'CSS brace balance');
+check(css.includes('prefers-reduced-motion') && css.includes(':focus-visible'), 'accessibility styles');
+check((html.match(/data-gallery\s/g) || []).length === 3, 'three screenshot links');
+check(html.includes('Pusty koszyk'), 'honest empty cart caption');
+check(html.includes('class="nickname" aria-hidden="true">kuti</span>'), 'nickname');
+check(html.includes('class="screenshot-frame"'), 'full screenshot crop container');
+check(css.includes('.screenshot-frame{width:100%;aspect-ratio:16/9;overflow:hidden;'), 'white bottom excluded from full screenshot viewport');
+for (const name of ['index.html','app.js','styles.css','config.js','assets/favicon.svg']) check(!fs.readFileSync(path.join(root,name),'utf8').includes(String.fromCharCode(0x2014)), 'requested punctuation: ' + name);
+console.log(`OK: ${checks} checks (configuration, security helpers, HTML references and static structure).`);
